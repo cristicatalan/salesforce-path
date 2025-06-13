@@ -32,3 +32,6 @@ Utils.GenerateData();
 
 BatchGenerator batchGenerator = new BatchGenerator();
 Database.executeBatch(batchGenerator);
+
+BatchDeduplicator batchDeduplicator = new BatchDeduplicator();
+Database.executeBatch(batchDeduplicator);
