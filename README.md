@@ -19,6 +19,7 @@ The `sfdx-project.json` file contains useful configuration information for your 
 
 ## Anonymouns Apex to test
 
+```
 List<Middle_Thingy__c> middleThingies = [select Id from Middle_Thingy__c];
 delete middleThingies;
 
@@ -35,3 +36,4 @@ Database.executeBatch(batchGenerator);
 
 BatchDeduplicator batchDeduplicator = new BatchDeduplicator();
 Database.executeBatch(batchDeduplicator);
+```
