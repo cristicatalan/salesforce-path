@@ -2,7 +2,7 @@ public class BatchDeduplicatorV4 implements Database.Batchable<SObject>, Databas
     private string lastCompositeKey = '';
 
     public Database.QueryLocator Start(Database.BatchableContext bc) {
-        return Database.getQueryLocator('select Id, Duplicate_Thingy__c, Description__c from Middle_Thingy__c order by Duplicate_Thingy__c, Description__c, CreatedDate');
+        return Database.getQueryLocator('select Id, Duplicate_Thingy__c, Description__c from Middle_Thingy__c order by Duplicate_Thingy__c, Description__c');
     }
 
     public void Execute(Database.BatchableContext bc, List<Middle_Thingy__c> middleThingies) {
